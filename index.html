@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+        </head>
+    <body>
+        <div class="main-container">
+            <h1>Flashcards</h1>
+            <button id="explanation-link">How it works</button>
+            <div class="card-displays" id="card-front"></div>
+            <button id="show-button" type="button">Show Answer</button>
+            <div class="card-displays" id="card-back"></div>
+            <div class="difficulty-buttons-container">
+                <button id="easy-button" class="button hidden" input type="button">Easy</button>
+                <button id="normal-button"  class="button hidden" input type="button">Normal</button>
+                <button id="difficult-button"  class="button hidden" input type="button">Difficult</button>
+                <button id="forgot-button"  class="button hidden" input type="button">Forgot</button>
+            </div>
+            <div class="div-add-new">
+                <button id="new-card-button">Add New Card</button>
+            </div>
+        </div>
+        
+        <dialog id="modal">
+            <form id="modal-container">
+                <button id="close-modal"><strong>x</strong></button>
+                <input id="front-input" autocomplete="off" type="text" placeholder="Enter flashcard front text..."><input id="back-input" autocomplete="off" type="text" placeholder="Enter flashcard back text..."><button id="button-modal">Add</button>
+            </form>
+        </dialog>
+        <dialog id="explanation-modal"><button id='close-explanation'>x</button><span>For each card add a front that will be your clue and a back that will be what you must remember. <br><br>
+        Upon being presented with a new card you will not see the back. After clicking 'Show Answer', you will see the answer and the difficulty buttons will become visible. <br><br>
+        The more difficult you find it to remember a card, the more often that card will be shown to you. Likewise the easier a card is, the less it will be repeated. <br><br>
+        An example: <br><br>
+        Front card: The capital of England <br><br>
+        Back card: London </span>
+    </dialog>
+        <script src="script.js"></script>
+        </body>
+</html>
