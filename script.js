@@ -49,10 +49,9 @@ const setNextCard = function (cards, key) {
     currentCard = findLowest(cards, key);   // finds object in array with lowest value
     // finds next lowest card if card will repeat
     if (currentCard === previousCard && cards.length > 1) { 
-        const notSameCard = function(thisCard, index) {
+        const tempArray = cards.filter((el, index) => {
             return index !== previousCard;
-        }
-        const tempArray = cards.filter(notSameCard);
+        });
         currentCard = findLowest(tempArray, key);
         previousCard = currentCard;
     }
